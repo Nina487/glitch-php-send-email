@@ -19,14 +19,14 @@ try {
     $mail->isSMTP();  //Choosing SMTP server for sending messages                                         
     $mail->Host       = 'smtp.gmail.com'; //Host for SMTP messages (gmail)               
     $mail->SMTPAuth   = true; //SMTP needs authentication                                 
-    $mail->Username   = 'nina.lucna333@gmail.com'; //Email  you want to send FROM (gmail)             
-    $mail->Password   = 'lpne ozxd kpxc xuva';  // Low security application password for your google account, if you don't know how to generate it, just message me                           
+    $mail->Username   = 'email'; //Email  you want to send FROM (gmail)             
+    $mail->Password   = 'password';  // Low security application password for your google account, if you don't know how to generate it, just message me                           
     $mail->SMTPSecure = PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_STARTTLS; //Encryption      
     $mail->Port       = 587; //port
 
     //Recipients
-    $mail->setFrom('nina.lucna333@gmail.com'); // Your email address also here
-    $mail->addAddress($mailTo); //Email you're sending TO, in this example specified in index.php form
+    $mail->setFrom('email'); // Your email address also here
+    $mail->addAddress('email'); //Email you're sending TO, in this example specified in index.php form
 
     $mail->isHTML(true); //Enabling HTML tags in email body
     $mail->Subject = $subject; //Email subject from index.php form
